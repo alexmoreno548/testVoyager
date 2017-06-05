@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ voyager_asset('lib/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ voyager_asset('css/animate.min.css') }}">
     <link rel="stylesheet" href="{{ voyager_asset('css/login.css') }}">
-    <style>
+    <style> 
         body {
             background-image:url('{{ Voyager::image( Voyager::setting("admin_bg_image"), config('voyager.assets_path') . "/images/bg.jpg" ) }}');
             background-color: {{ Voyager::setting("admin_bg_color", "#FFFFFF" ) }};
@@ -36,15 +36,17 @@
             <div class="clearfix">
                 <div class="col-sm-12 col-md-10 col-md-offset-2">
                     <div class="logo-title-container">
+                    <!--
                         <?php $admin_logo_img = Voyager::setting('admin_icon_image', ''); ?>
                         @if($admin_logo_img == '')
                         <img class="img-responsive pull-left logo hidden-xs animated fadeIn" src="{{ voyager_asset('images/logo-icon-light.png') }}" alt="Logo Icon">
                         @else
                         <img class="img-responsive pull-left logo hidden-xs animated fadeIn" src="{{ Voyager::image($admin_logo_img) }}" alt="Logo Icon">
                         @endif
+                        <--></-->
                         <div class="copy animated fadeIn">
-                            <h1>{{ Voyager::setting('admin_title', 'Voyager') }}</h1>
-                            <p>{{ Voyager::setting('admin_description', 'Welcome to Voyager. The Missing Admin for Laravel') }}</p>
+                            <h1>{{ Voyager::setting('admin_title', 'Sidutrade') }}</h1>
+                            <p>{{ Voyager::setting('admin_description', 'Panel de administracion') }}</p>
                         </div>
                     </div> <!-- .logo-title-container -->
                 </div>
@@ -55,7 +57,7 @@
 
             <div class="login-container animated fadeInRightBig">
 
-                <h2>Sign In Below:</h2>
+                <h2>Acceso:</h2>
 
                 <form action="{{ route('voyager.login') }}" method="POST">
                 {{ csrf_field() }}
